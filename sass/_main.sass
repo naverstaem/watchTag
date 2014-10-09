@@ -358,7 +358,7 @@ header
   background: url(../img/our_bg.jpg) center no-repeat
   +background-size(cover)
   height: 800px
-  padding-top: 70px
+  padding-top: 65px
   position: relative
   +clr
   +box
@@ -371,19 +371,16 @@ header
     line-height: 1em
     text-transform: uppercase
   h2
-    color: #d2b978
+    line-height: 1em
+    span
+      font-family: 'conv_pfdintextcondpro-thin'
+      font-size: 36px
+
 
   .our_in
     @extend %in
     position: relative
     +clr
-  .our__girl
-    position: absolute
-    bottom: -89px
-    left: -50px
-    z-index: 1
-    img
-      display: block
 
   .russia
     position: relative
@@ -398,7 +395,7 @@ header
     font-size: 18px
     position: absolute
     top: 50%
-    left: 54%
+    left: 50%
     +transform(translate(-50%, -50%))
     margin-top: 60px
     &:before
@@ -410,7 +407,6 @@ header
   &__bottom
     width: 600px
     margin: 55px auto 0
-    margin-left: 340px
     position: relative
   &__price
     width: 180px
@@ -516,8 +512,7 @@ header
 .bottom
   height: 840px
   @extend header
-  padding-top: 60px
-  margin-top: 60px
+  padding-top: 0
   .header__main--main_in--bottom
     margin-top: 55px !important
 
