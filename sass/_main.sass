@@ -1,0 +1,533 @@
+// Normally mainpage styles 
+//+font('Conv_SegoePrintRegular', 'SegoePrintRegular')
+
+.top
+  background: rgba(#000, 1)
+
+  +background-size(cover)
+  height: 70px
+  .header_in
+    @extend %in
+    +clr
+    width: 980px
+    position: relative
+    padding-top: 29px
+
+  nav
+    float: left
+    ul
+      font-size: 16px
+      padding: 0
+      li
+        display: inline-block
+        float: left
+        margin-right: 16px
+        font-family: 'conv_pfdintextcondpro-lightital'
+        border-right: solid 1px
+        color: #ffffff
+        line-height: 1em
+        padding-right: 20px
+        &:last-child
+          border: none
+        a
+          text-decoration: none
+          color: inherit
+          border-bottom: solid 1px
+          &:hover
+            border-bottom: solid 3px
+          &.is-active
+            border-bottom: solid 3px
+
+
+
+  .top__phone
+    float: left
+    text-align: right
+    +clr
+    font-size: 30px
+    color: #f0c8a0
+    margin: -9px 0 0 120px
+    font-family: 'pf_highway_sans_prothin'
+    line-height: 1.1em
+    font-weight: normal
+    span
+      font-family: 'pf_highway_sans_promedium'
+  .callme
+    float: right
+    color: #f0c8a0
+    +pfl
+    font-size: 18px
+    margin-top: -4px
+    &:hover
+      text-decoration: none
+
+
+
+header
+  background: url(../img/header_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 840px
+  position: relative
+  +box
+
+  .header_in
+    @extend %in
+    +clr
+    position: relative
+
+  h1
+    padding-top: 150px
+
+  .header__main--main
+    +clr
+    .header__main--main_in
+      +clr
+      @extend %in
+      position: relative
+      margin-top: 35px
+    .header__logo
+      position: absolute
+      left: 50%
+      +transform(translate(-50%))
+      top: -190px
+    .watch
+      position: absolute
+      background: url(../img/header_watch.png) no-repeat
+      width: 450px
+      height: 625px
+      top: 0px
+      left: 0
+      z-index: 1
+      +clr
+
+
+
+    .price
+      background: url(../img/price_bg.png) no-repeat
+      text-align: center
+      position: absolute
+      width: 250px
+      height: 200px
+      +box
+      padding-top: 50px
+      top: 65px
+      left: 370px
+      color: #ffffff
+      font-family: 'conv_pfdintextcondpro-light'
+      font-weight: normal
+      .price--old
+        font-size: 30px
+        color: #cdbeb4
+        line-height: 1em
+
+      .price--new
+        font-family: 'conv_pfdintextcondpro-regular'
+        font-size: 48px
+        line-height: 1em
+
+        span
+          font-family: 'als_rublregular'
+          font-size: 24px
+
+
+
+
+
+    .header__right
+      position: relative
+      float: right
+      margin-top: 62px
+      +clr
+
+
+
+.scrollMenu
+  //@extend header
+  @extend .top
+  .header_in
+    padding-top: 20px
+  position: fixed
+  z-index: 999
+  width: 100%
+  top: 0
+  left: 0
+  bottom: auto
+  display: none
+  height: 60px
+  +box
+  background: rgba(#000, 0.8)
+  .top
+    height: 0
+
+
+.history
+  padding-top: 60px
+  background: #090505
+  +box
+  +clr
+  .history_in
+    @extend %in
+    padding-top: 50px
+    +clr
+  .history__block
+    margin-top: 0
+    +clr
+    .history__block--left
+      float: left
+      width: 700px
+      +clr
+      p
+        font-size: 18px
+        margin-bottom: 28px
+        color: #ffffff
+        +pfl
+        line-height: 1.5em
+
+    .history__block--right
+      float: right
+      width: 290px
+      +clr
+      .history__img
+        position: relative
+        display: block
+        width: 290px
+        height: 369px
+        +clr
+        +transition(all .5s)
+        &:hover
+          +opacity(.7)
+        img
+          display: block
+        .history__video
+          position: absolute
+          top: 40px
+          left: 93px
+          color: #ffffff
+          font-family: 'conv_segoeprintregular'
+          font-size: 14px
+          +s(video_ico)
+          text-align: center
+          padding-top: 100px
+          +box
+
+
+.specs
+  background: url(../img/specs_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 910px
+  padding-top: 90px
+  +clr
+  +box
+  h2
+    margin-bottom: 27px
+  .specs_in
+    @extend %in
+    width: 960px
+    +clr
+  &__items
+    float: right
+    width: 460px
+    font-size: 18px
+    margin-right: 10px
+    padding-left: 30px
+    padding-bottom: 40px
+    +box
+    +background-image(linear-gradient(to bottom left, #000 0%, rgba(40,30,30,.9) 100%))
+    &.short
+      width: 220px
+
+
+  &__item
+    color: #736464
+    margin-top: 30px
+    font-family: 'conv_pfdintextcondpro-light'
+    font-size: 16px
+
+    span
+      color: #ffffff
+      font-size: 18px
+      text-transform: uppercase
+
+  &__watch
+    position: relative
+    float: left
+    width: 450px
+    margin-right: 20px
+    margin-top: 45px
+    img
+      width: 450px
+      height: 625px
+      position: relative
+      display: block
+
+
+
+
+.photos
+  background: #271d1d
+  height: 200px
+  padding: 10px 0
+  +box
+  +clr
+  .photos_in
+    @extend %in
+    width: 1000px
+  .photo__item
+    position: relative
+    display: inline-block
+    width: 320px
+    height: 180px
+    vertical-align: top
+    margin-right: 15px
+    &:last-child
+      margin-right: 0
+    span
+      position: absolute
+      top: 0
+      left: 0
+      right: 0
+      bottom: 0
+      background: rgba(#271d1d, .8)
+      +opacity(0)
+      +transition(background, .5s)
+      &:after
+        position: absolute
+        content: ""
+        +s(zoom)
+        top: 50%
+        left: 50%
+        +transform(translate(-50%, -50%))
+
+      &:hover
+        +opacity(1)
+
+    img
+      display: block
+
+
+
+
+
+
+
+.reviews
+  +clr
+  margin-top: 65px
+  padding-bottom: 60px
+  h2
+    margin-bottom: 35px
+  .reviews_in
+    @extend %in
+    +clr
+  .review__item
+    +background-clip(padding-box)
+    width: 300px
+    position: relative
+    display: inline-block
+    margin-right: 42px
+    +border-radius(8px)
+    +background-clip(padding-box)
+    padding: 18px
+    background: #efebe1
+    +box-shadow(inset 0 -2px 0 rgba(0,0,0,.1))
+    +box
+    +clr
+    &:last-child
+      margin-right: 0
+    &:after
+      position: absolute
+      content: ""
+      bottom: -34px
+      left: 15px
+      +s(review_popup)
+
+    h3
+      color: #3c3c3c
+      font-size: 18px
+      font-family: 'conv_pfdintextcondpro-light'
+      text-transform: uppercase
+      margin-bottom: 10px
+      font-weight: normal
+    p
+      +pfl
+      color: #3c3c3c
+      font-size: 16px
+
+
+.our
+  background: url(../img/our_bg.jpg) center no-repeat
+  +background-size(cover)
+  height: 800px
+  padding-top: 65px
+  position: relative
+  +clr
+  +box
+  h3
+    font-weight: normal
+    color: #ffffff
+    font-size: 36px
+    font-family: 'georgiaitalic'
+    text-align: center
+    line-height: 1em
+    text-transform: uppercase
+  h2
+    line-height: 1em
+    span
+      font-family: 'conv_pfdintextcondpro-thin'
+      font-size: 36px
+
+
+  .our_in
+    @extend %in
+    position: relative
+    +clr
+
+  .russia
+    position: relative
+    background: url(../img/russia.png) center center no-repeat
+    width: 860px
+    height: 515px
+    margin: -60px auto 0
+  &__delivery
+    width: 170px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    font-size: 18px
+    position: absolute
+    top: 50%
+    left: 50%
+    +transform(translate(-50%, -50%))
+    margin-top: 60px
+    &:before
+      position: absolute
+      content: ""
+      +s(pin_ico)
+      top: -73px
+      left: -132px
+  &__bottom
+    width: 600px
+    margin: 55px auto 0
+    position: relative
+  &__price
+    width: 180px
+    display: inline-block
+    position: relative
+    margin-right: 170px
+    margin-left: 50px
+    color: #ffffff
+    font-size: 18px
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -8px
+      left: -75px
+      content: ""
+      +s(price_ico)
+  &__support
+    width: 190px
+    display: inline-block
+    position: relative
+    font-size: 18px
+    color: #ffffff
+    font-family: 'conv_pfdintextcondpro-regular'
+    &:before
+      position: absolute
+      top: -5px
+      left: -75px
+      content: ""
+      +s(bubble_ico)
+
+.order
+  margin-top: 40px
+  padding-bottom: 40px
+  .order_in
+    @extend %in
+  h2
+    margin-bottom: 40px
+  &__item
+    vertical-align: top
+    width: 320px
+    +background-clip(padding-box)
+    border: solid 4px rgb(230,230,230)
+    text-align: center
+    padding-top: 20px
+    padding-bottom: 20px
+    display: inline-block
+    margin-right: 14px
+    +box
+    &:last-child
+      margin-right: 0
+  &__caption
+    font-size: 36px
+    font-family: 'pf_highway_sans_prolight'
+    margin-bottom: 95px
+    color: #281e1e
+  &__img
+    display: inline-block
+    margin-bottom: 75px
+    width: 250px
+    height: 85px
+    img
+      display: block
+  &__price
+    background: url(../img/price-order_bg.png) no-repeat
+    width: 320px
+    height: 80px
+    +box
+    margin-left: -4px
+
+    h3
+      font-family: 'conv_pfdintextcondpro-regular'
+      font-size: 48px
+      font-weight: normal
+      color: #ffffff
+      margin-left: 50px
+      margin-top: 6px
+      float: left
+      span
+        font-family: 'als_rublregular'
+        font-size: 24px
+    h4
+      color: #736464
+      font-size: 24px
+      font-family: 'conv_pfdintextcondpro-light'
+      font-weight: normal
+      float: right
+      margin-top: 23px
+      margin-right: 40px
+  &__text
+    padding: 20px 15px 0
+    font-size: 16px
+    color: #787878
+    text-align: left
+  &__form
+    margin-top: 35px
+    input
+      width: 250px
+      margin-bottom: 10px
+    .button
+
+
+
+.bottom
+  height: 840px
+  @extend header
+  padding-top: 0
+  .header__main--main_in--bottom
+    margin-top: 55px !important
+
+
+footer
+  box-sizing: border-box
+  height: 100px
+  @extend %in
+  text-align: center
+  padding-top: 20px
+  p
+    font-size: 16px
+    color: #787878
+    a
+      color: #be0a0a
+      &:hover
+        text-decoration: none
+
