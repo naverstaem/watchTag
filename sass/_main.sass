@@ -159,20 +159,124 @@ header
   .top
     height: 0
 
+
+.history
+  padding-top: 60px
+  background: #090505
+  +box
+  +clr
+  .history_in
+    @extend %in
+    padding-top: 50px
+    +clr
+  .history__block
+    margin-top: 0
+    +clr
+    .history__block--left
+      float: left
+      width: 700px
+      +clr
+      p
+        font-size: 18px
+        margin-bottom: 28px
+        color: #ffffff
+        +pfl
+        line-height: 1.5em
+
+    .history__block--right
+      float: right
+      width: 290px
+      +clr
+      .history__img
+        position: relative
+        display: block
+        width: 290px
+        height: 369px
+        +clr
+        +transition(all .5s)
+        &:hover
+          +opacity(.7)
+        img
+          display: block
+        .history__video
+          position: absolute
+          top: 40px
+          left: 93px
+          color: #ffffff
+          font-family: 'conv_segoeprintregular'
+          font-size: 14px
+          +s(video_ico)
+          text-align: center
+          padding-top: 100px
+          +box
+
+
+.specs
+  background: url(../img/specs_bg.jpg) center center no-repeat
+  +background-size(cover)
+  height: 910px
+  padding-top: 90px
+  +clr
+  +box
+  h2
+    margin-bottom: 27px
+  .specs_in
+    @extend %in
+    width: 960px
+    +clr
+  &__items
+    float: right
+    width: 460px
+    font-size: 18px
+    margin-right: 10px
+    padding-left: 30px
+    padding-bottom: 40px
+    +box
+    +background-image(linear-gradient(to bottom left, #000 0%, rgba(40,30,30,.9) 100%))
+    &.short
+      width: 220px
+
+
+  &__item
+    color: #736464
+    margin-top: 30px
+    font-family: 'conv_pfdintextcondpro-light'
+    font-size: 16px
+
+    span
+      color: #ffffff
+      font-size: 18px
+      text-transform: uppercase
+
+  &__watch
+    position: relative
+    float: left
+    width: 450px
+    margin-right: 20px
+    margin-top: 45px
+    img
+      width: 450px
+      height: 625px
+      position: relative
+      display: block
+
+
+
+
 .photos
-  background: #000
-  height: 150px
+  background: #271d1d
+  height: 200px
   padding: 10px 0
   +box
   +clr
   .photos_in
     @extend %in
-    width: 960px
+    width: 1000px
   .photo__item
     position: relative
     display: inline-block
-    width: 300px
-    height: 130px
+    width: 320px
+    height: 180px
     vertical-align: top
     margin-right: 15px
     &:last-child
@@ -183,27 +287,17 @@ header
       left: 0
       right: 0
       bottom: 0
-      background: rgba(#000, .7)
+      background: rgba(#271d1d, .8)
       +opacity(0)
       +transition(background, .5s)
       &:after
-        position: absolute
-        content: ""
-        background: rgba(#d1b977, .5)
-        +border-radius(50%)
-        width: 80px
-        height: 80px
-        +transform(translate(-50%, -50%))
-        top: 50%
-        left: 50%
-
-      i
         position: absolute
         content: ""
         +s(zoom)
         top: 50%
         left: 50%
         +transform(translate(-50%, -50%))
+
       &:hover
         +opacity(1)
 
@@ -213,142 +307,15 @@ header
 
 
 
-.history
-  padding-top: 60px
-  background: rgb(40,40,40)
-  height: 600px
-  +background-size(cover)
-  +box
-  +clr
-  h2
-    color: #d2b978
-  .history_in
-    @extend %in
-    padding-top: 50px
-    +clr
-  .history__block
-    margin-top: 0
-    +clr
-    .history__block--right
-      float: right
-      width: 620px
-      +clr
-      p
-        font-size: 18px
-        margin-bottom: 28px
-        color: #ffffff
-
-    .history__block--left
-      float: left
-      width: 340px
-      +clr
-      .history__img
-        position: relative
-        display: block
-        width: 340px
-        height: 370px
-        margin-top: -40px
-        +clr
-        img
-          display: block
 
 
-.specs
-  background: url(../img/specs_bg.png) center center no-repeat
-  +background-size(cover)
-  height: 770px
-  padding-top: 70px
-  +clr
-  +box
-  h2
-    margin-bottom: 30px
-    font-size: 36px
-    color: #554628
-  .specs_in
-    @extend %in
-    width: 960px
-    +clr
-  &__items
-    float: left
-    width: 355px
-    font-size: 18px
-    margin-right: 65px
-    &:last-of-type
-      margin-right: 0
-    &.short
-      width: 220px
-
-
-  &__item
-    color: #5a5a5a
-    margin-top: 30px
-    font-family: 'georgiaitalic'
-    font-size: 16px
-
-    span
-      color: #1e1e1e
-      font-family: 'conv_pfdintextcondpro-light'
-      font-size: 18px
-    
-  &__watch
-    position: relative
-    float: right
-    margin-right: 20px
-    margin-top: 45px
-    img
-      width: 290px
-      height: 565px
-      position: relative
-      z-index: 1
-    .specs__text-degree
-      position: absolute
-      top: -15px
-      left: -65px
-      width: 160px
-      height: 110px
-      z-index: 0
-      .text-degree
-        position: relative
-        font-family: 'georgiaitalic'
-        font-size: 16px
-        line-height: 1.3em
-        padding-left: 0
-        display: inline-block
-        color: #504b41
-        text-align: center
-        top: 35px
-        left: -15px
-
-        span
-          font-family: 'georgiabold_italic'
-          font-size: 30px
-        &:before
-          position: absolute
-          content: ""
-          top: -33px
-          left: -10px
-          +s(360)
-
-    .prev
-      position: absolute
-      left: -35px
-      top: 204px
-      content: ""
-      cursor: pointer
-      +s(prev)
-    .next
-      position: absolute
-      right: -35px
-      top: 204px
-      content: ""
-      cursor: pointer
-      +s(next)
 
 .reviews
   +clr
-  margin-top: 70px
+  margin-top: 65px
+  padding-bottom: 60px
   h2
-    margin-bottom: 40px
+    margin-bottom: 35px
   .reviews_in
     @extend %in
     +clr
@@ -358,10 +325,11 @@ header
     position: relative
     display: inline-block
     margin-right: 42px
-    +border-radius(2px)
+    +border-radius(8px)
     +background-clip(padding-box)
-    padding: 23px 18px
-    border: solid 2px #dbd7cd
+    padding: 18px
+    background: #efebe1
+    +box-shadow(inset 0 -2px 0 rgba(0,0,0,.1))
     +box
     +clr
     &:last-child
@@ -370,19 +338,19 @@ header
       position: absolute
       content: ""
       bottom: -34px
-      left: 10px
+      left: 15px
       +s(review_popup)
 
     h3
-      color: #1e1e1e
+      color: #3c3c3c
       font-size: 18px
-      font-family: 'georgiaitalic'
+      font-family: 'conv_pfdintextcondpro-light'
       text-transform: uppercase
-      margin-bottom: 12px
+      margin-bottom: 10px
       font-weight: normal
     p
       +pfl
-      color: #1e1e1e
+      color: #3c3c3c
       font-size: 16px
 
 
@@ -474,7 +442,8 @@ header
       +s(bubble_ico)
 
 .order
-  margin-top: 100px
+  margin-top: 40px
+  padding-bottom: 40px
   .order_in
     @extend %in
   h2
@@ -483,20 +452,20 @@ header
     vertical-align: top
     width: 320px
     +background-clip(padding-box)
-    border: solid 4px #efebe1
+    border: solid 4px rgb(230,230,230)
     text-align: center
-    padding-top: 25px
-    padding-bottom: 40px
+    padding-top: 20px
+    padding-bottom: 20px
     display: inline-block
     margin-right: 14px
     +box
     &:last-child
       margin-right: 0
   &__caption
-    font-size: 30px
-    font-family: 'conv_pfdintextcondpro-thin'
-    margin-bottom: 110px
-    color: #1e1e1e
+    font-size: 36px
+    font-family: 'pf_highway_sans_prolight'
+    margin-bottom: 95px
+    color: #281e1e
   &__img
     display: inline-block
     margin-bottom: 75px
@@ -512,37 +481,35 @@ header
     margin-left: -4px
 
     h3
-      font-family: 'georgiaitalic'
-      font-size: 36px
+      font-family: 'conv_pfdintextcondpro-regular'
+      font-size: 48px
       font-weight: normal
       color: #ffffff
       margin-left: 50px
-      margin-top: 13px
+      margin-top: 6px
       float: left
       span
-        position: relative
-        text-transform: uppercase
+        font-family: 'als_rublregular'
         font-size: 24px
     h4
-      color: #504b41
+      color: #736464
       font-size: 24px
-      font-family: 'georgiaitalic'
+      font-family: 'conv_pfdintextcondpro-light'
       font-weight: normal
       float: right
-      margin-top: 22px
-      margin-right: 50px
+      margin-top: 23px
+      margin-right: 40px
   &__text
     padding: 20px 15px 0
     font-size: 16px
     color: #787878
     text-align: left
   &__form
-    margin-top: 5px
+    margin-top: 35px
     input
       width: 250px
       margin-bottom: 10px
     .button
-      padding: 0 68px
 
 
 

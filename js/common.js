@@ -41,13 +41,15 @@ head.ready(function() {
     $('.fancybox').fancybox({
         helpers:{
             overlay: {
-                locked: false
+                locked: false,
+                css:{'background' : 'rgba(#271d1d, 0.8)'}
             }
-        },
-        beforeShow: function(){
-            $(".fancybox-skin").css("backgroundColor","transparent");
-            $(".fancybox-skin").css("boxShadow","none");
         }
+//        ,
+//        beforeShow: function(){
+//            $(".fancybox-skin").css("backgroundColor","transparent");
+//            $(".fancybox-skin").css("boxShadow","none");
+//        }
     });
 
 //
@@ -55,7 +57,8 @@ head.ready(function() {
 //        padding: 0,
 //        helpers: {
 //            overlay: {
-//                locked: false
+//                locked: false,
+//                  css:{'background' : 'rgba(#000, 0.8)'}
 //            }
 //        },
 //        tpl: {
